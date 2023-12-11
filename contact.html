@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Form with Validation</title>
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+
+<body>
+    <header>
+        <nav class="internal">
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="endangeredanimals.html">Endangered Animals</a></li>
+                <li><a href="howtohelp.html">How To Help</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Extinct</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form id="contactForm" action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="button" onclick="validateForm()">Submit</button>
+
+    </form>
+
+
+    <script src="./java/script.js"></script>
+
+</body>
+
+</html>

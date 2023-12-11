@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Endangered Animals</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/gall.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.43/vue.global.js"
+        integrity="sha512-AeAq4ERir/fK21tZBm9jok91KnDezzDmX9O2T9gfkofoFaM2WHgcZspXp/YqgJPXvPvOP+LaNslJCXKHFmnetg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="internal">
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="endangeredanimals.html">Endangered Animals</a></li>
+                <li><a href="howtohelp.html">How To Help</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Extinct</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1>Here are some species that are now extinct</h1>
+        <p>Psst... hover over the pictures for the names of the species</p>
+    </div>
+    <div id="app">
+        <div v-for="(image, index) in images" :key="index" class="image-container" @mouseover="flipCard(index)"
+            @mouseleave="unflipCard(index)">
+            <div class="card">
+                <div class="front">
+                    <img :src="image.url" :alt="image.alt" class="image">
+                </div>
+                <div class="back">
+                    <div class="description">{{ image.description }}</div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./java/vuej.js"></script>
+</body>
+
+</html>
